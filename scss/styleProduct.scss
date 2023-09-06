@@ -1,0 +1,248 @@
+.BackToHome {
+    display: flex;
+    padding-top: calc(10.6rem + 4.8rem);
+    padding-bottom: 2.4rem;
+    transition: 0.5s;
+    text-decoration: none;
+    text-transform: none;
+
+    @include tablets {
+        padding-top: 7rem;
+    }
+
+    &:hover .BackToHome__img__path {
+        fill: $blue200;
+    }
+
+    &:hover .BackToHome__tittle {
+        color: $blue200;
+    }
+
+    &__tittle {
+        font-size: 20px;
+        font-weight: 300;
+        color: $Gray;
+        transition: 0.5s;
+        padding: 0;
+    }
+
+    &__img {
+        align-self: center;
+        padding: 0;
+
+        &__path {
+            color: $Gray;
+            transition: 0.5s;
+        }
+    }
+}
+
+
+.TittleBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include laptop {
+        flex-direction: column;
+    }
+
+    &__Gallery {
+        width: 100%;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__Right {
+        align-self: flex-start;
+
+        @include laptop {
+            padding-top: 4.4rem;
+        }
+
+        &__tittle {
+            font-size: 33px;
+            font-weight: 300;
+        }
+
+        &__text {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        &__subtittle {
+            display: flex;
+
+            &__text {
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.SubImg {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.elem,
+.elem * {
+    box-sizing: border-box;
+    // margin: 0 !important;
+}
+
+.elem {
+    display: inline-block;
+    font-size: 0;
+    border-bottom: none;
+    background: #fff;
+    height: auto;
+    background-clip: padding-box;
+    filter: drop-shadow(0px 1px 12px rgba(0, 0, 0, 0.25));
+
+}
+
+.elem>span {
+    display: block;
+    cursor: pointer;
+    height: 0;
+    padding-bottom: 55%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.elemMain {
+    width: 100%;
+}
+
+.elemMain>span {
+    width: 100%;
+}
+
+.elemSub {
+    width: 100%;
+}
+
+.elemSub>span {
+    width: 100%;
+}
+
+
+
+.ProductDescription {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+
+    &__tittle {
+        font-size: 33px;
+        font-weight: 300;
+        padding-bottom: 3.2rem;
+
+        &__peculiarities {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 3.2rem;
+            &__tittle {
+                font-size: 26px;
+                font-weight: 300;
+            }
+
+            &__subtittle {
+                display: flex;
+
+                &__text {
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &__paragraph {
+            font-size: 20px;
+            font-weight: 300;
+            padding: 0 0 3.2rem 0;
+            margin: 0;
+        }
+    }
+}
+
+
+.TittleBlock__Gallery_mod {
+    margin-right: 3.8rem;
+}
+
+.button-dark_productMod {
+    align-self: center;
+    margin-top: 4.8rem;
+}
+
+.line_productMod {
+    margin-top: 4.8rem;
+}
+
+.ProductDescription__tittle__paragraph_last {
+    padding: 0;
+}
+
+.BackToHome__img_mod {
+    margin-right: 1rem;
+}
+
+.TittleBlock__Right__subtittle__img_mod {
+    margin-right: 1.8rem;
+}
+
+.SubImg_mod {
+    margin-top: 4.4rem;
+
+    @include container {
+        margin-top: 2rem;
+    }
+
+    @include laptop {
+        margin-top: 4.4rem;
+    }
+
+    @include tablets {
+        margin-top: 2rem;
+    }
+
+    @include phones {
+        margin-top: 1rem;
+    }
+}
+
+.elemSub_mod {
+    margin-right: 4.4rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include container {
+        margin-right: 2rem;
+    }
+
+    @include laptop {
+        margin-right: 4.4rem;
+    }
+
+    @include tablets {
+        margin-right: 2rem;
+    }
+
+    @include phones {
+        margin-right: 1rem;
+    }
+}
+.ProductDescription__tittle__peculiarities__subtittle__img_mod{
+    margin-right: 2.4rem;
+}
