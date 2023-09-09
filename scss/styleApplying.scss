@@ -1,0 +1,326 @@
+.Applying {
+    padding-bottom: 4.8rem;
+
+    &__tittle {
+        font-size: 3.3rem;
+        font-weight: 300;
+        padding-bottom: 2.2rem;
+
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        gap: 4.8rem 3.8rem;
+
+        @include tablets {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+
+        &__item {
+            // max-width: 53.6rem;
+            // @include phones {
+            //     max-width: 42.9rem;
+            // }
+            position: static;
+
+            &:nth-child(even) {
+                justify-self: end;
+
+                @include tablets {
+                    justify-self: center;
+                }
+            }
+
+            &:nth-child(odd) {
+                @include tablets {
+                    justify-self: center;
+                }
+            }
+
+            &__picture {
+                display: block;
+                max-width: 100%;
+                height: 30.6rem;
+                box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
+
+                @include tablets {
+                    justify-self: center;
+                }
+
+                @include phones {
+                    // max-width: 42.9rem;
+                    height: 24.5rem;
+                }
+
+                &__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__tittle {
+                font-size: 3.3rem;
+                font-weight: 300;
+                text-decoration: none;
+                text-transform: none;
+                color: $black;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $blue200;
+                }
+
+                @include phones {
+                    // max-width: 42.9rem;
+                    font-size: 2.7rem;
+                }
+            }
+
+            &__subtittle {
+                font-size: 2rem;
+                font-weight: 300;
+
+                @include phones {
+                    // max-width: 42.9rem;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+.BackgroundSlidePicture {
+    width: 100%;
+    position: relative;
+
+
+
+    &__picture {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__tittle {
+
+            font-weight: 300;
+            color: $light;
+
+        }
+
+        &__subtittle {
+            font-size: 2rem;
+            font-weight: 300;
+            color: $light;
+
+            @include phones {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+.lightPicture {
+    &::before {
+        background-color: rgba($black, 0.6);
+    }
+}
+.DarkPicture {
+    &::before {
+        background-color: rgba($black, 0.9);
+    }
+}
+
+.BackgroundSlidePicture_UpMod {
+    height: calc(100vh - 10.6rem);
+    padding-top: 10.6rem;
+
+    @include tablets {
+        height: calc(100vh - 7rem);
+        padding-top: 7rem;
+    }
+}
+
+.BackgroundSlidePicture__text_UpMod {
+    bottom: 7.1rem;
+}
+
+.BackgroundSlidePicture__text__tittle_UpMod {
+    font-size: 59px;
+    text-align: center;
+
+    @include phones {
+        font-size: 3.3rem;
+    }
+}
+
+.BackgroundSlidePicture__text__subtittle_UpMod {
+    text-align: center;
+}
+
+.BackgroundSlidePicture_DownMod {
+    height: calc(100vh - 10.6rem);
+
+    @include tablets {
+        height: calc(100vh - 7rem);
+    }
+}
+
+.BackgroundSlidePicture__text_DownMod {
+    height: 100%;
+    top: 0;
+}
+
+.BackgroundSlidePicture__text__tittle_DownMod {
+    font-size: 33px;
+    font-weight: 300;
+
+    @include phones {
+        font-size: 2.7rem;
+    }
+}
+
+.BackgroundSlidePicture__text__subtittle_DownMod {
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include phones {
+        font-size: 1.6rem;
+    }
+}
+
+
+.BackToHome_modApplying {
+    margin-top: 4.8rem;
+
+    @include tablets {
+        margin-top: 4.8rem;
+    }
+}
+
+.TextPath {
+    padding-bottom: 4.8rem;
+
+    &__paragraph {
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &__tittle {
+        font-size: 33px;
+        font-weight: 300;
+        margin: 2.4rem 0;
+
+        @include phones {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__Wrap {
+        display: flex;
+        padding-top: 2.4rem;
+
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+
+    &__WrapRow {
+        flex: 0 0 50%;
+        width: 50%;
+        align-self: flex-start;
+
+        @include tablets {
+            flex: 0 0 100%;
+            width: 100%
+        }
+    }
+
+    &__picture {
+        max-width: 53.2rem;
+
+        @include tablets {
+            margin-top: 2.4rem;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.paragraphPaddingTop {
+    padding-top: 2.4rem;
+}
+
+.BigTittleMod {
+    @include tablets {
+        font-size: 3.3rem;
+    }
+
+    @include phones {
+        font-size: 2.4rem;
+    }
+}
+
+
+
+.TextPath__WrapRow_MR {
+    margin-right: 4.3rem;
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.TextPath__WrapRow_ML {
+    margin-left: 4.3rem;
+
+    @include tablets {
+        margin-left: 0;
+    }
+}
+
+.Applying__block__item__picture_mod {
+    margin-bottom: 1.5rem;
+}
+
+.Applying__block__item__subtittle_mod {
+    margin: 1.5rem 0 0 0;
+}
