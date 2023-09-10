@@ -1,0 +1,330 @@
+.form {
+    &_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+    }
+
+    &__wrapLabelGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        @include tablets {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+    }
+
+    &__wrapLabel {
+        display: flex;
+        flex-direction: row;
+
+        @include tablets {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__wrapLabelOptions {
+        display: flex;
+        flex-direction: row;
+
+        @include tablets {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__wrapLabelColumn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tittle {
+        font-size: 3.3rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__subtittle {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $Gray;
+        text-align: center;
+    }
+
+    &__tittleOptions {
+        font-size: 2.6rem;
+        font-weight: 300;
+
+        // @include phones {
+        //     text-align: center;
+        // }
+    }
+
+    &__label {
+        font-size: 2.6rem;
+        font-weight: 300;
+    }
+
+    &__textarea {
+        min-height: 20.2rem;
+        border-radius: 1.5rem;
+        border: 1px solid $GrayForm;
+        resize: vertical;
+        transition: 0.3s;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+
+        &:focus {
+            background-color: #fff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+        }
+
+        @include tablets {
+            width: 39.8rem;
+        }
+
+        @include phones {
+            width: 29.8rem;
+        }
+    }
+}
+// .g-recaptcha{
+//     @include tablets {
+//         align-self: center;
+//     }
+// }
+@media (max-width: 38rem) {
+    .form__textarea {
+        width: 24.8rem;
+    }
+}
+
+// @media screen and (max-width: 30rem) {
+//     .form__textarea {
+//         width: 21.8rem;
+//     }
+// }
+
+
+// .OptionsItemCenter {
+//     @include tablets {
+//         align-items: center;
+//     }
+// }
+
+.ItemTextArea {
+
+    width: 50%;
+    height: 100%;
+
+    @include tablets {
+        // align-items: center;
+        width: 100%;
+    }
+}
+
+.formCapcha {
+    margin-left: 8rem;
+    align-self: flex-start;
+    @include tablets {
+        margin-left: 0;
+    }
+}
+
+.options {
+    &__item {
+        margin-right: 10.3rem;
+
+        &:last-child {
+            margin-right: 0;
+
+        }
+
+        @include tablets {
+            padding-bottom: 2.4rem;
+            margin-right: 0;
+
+            &:last-child {
+                padding-bottom: 0;
+
+            }
+        }
+
+    }
+
+    &__input {
+        display: none;
+
+        &:checked+.options__label::after {
+            transform: scale(1);
+        }
+    }
+
+    &__label {
+        font-size: 2rem;
+        font-weight: 300;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 2.4rem;
+            height: 2.4rem;
+            background-color: $light;
+            border: 1px solid $GrayForm;
+            border-radius: 4px;
+            margin: 0 1rem 0 0;
+        }
+
+        &::after {
+            transition: 0.5s;
+            content: "";
+            width: 1.6rem;
+            height: 1.6rem;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: $blue;
+            border-radius: 4px;
+            transform: scale(0);
+        }
+    }
+
+}
+
+.form__item__marginMod {
+    margin-bottom: 1.8rem;
+
+    &:nth-child(1) {
+        justify-self: start;
+
+        @include laptop {
+            justify-self: start;
+        }
+
+        // @include tablets {
+        //     justify-self: center;
+        // }
+    }
+
+    &:nth-child(2) {
+
+        @include laptop {
+            justify-self: start;
+        }
+
+        // @include tablets {
+        //     justify-self: center;
+        // }
+    }
+
+    &:nth-child(3) {
+        justify-self: end;
+
+        @include laptop {
+            justify-self: start;
+        }
+
+        // @include tablets {
+        //     justify-self: center;
+        // }
+    }
+
+    &:nth-child(4) {
+        justify-self: start;
+
+        @include laptop {
+            justify-self: start;
+        }
+
+        // @include tablets {
+        //     justify-self: center;
+        // }
+    }
+
+    &:nth-child(5) {
+
+        @include laptop {
+            justify-self: start;
+        }
+
+        // @include tablets {
+        //     justify-self: center;
+        // }
+    }
+}
+
+.form__label_modInput {
+    margin-bottom: 1.9rem;
+}
+
+.form__tittleOptions_mod {
+    margin-top: 0.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.form__label_modTextarea {
+    margin-bottom: 2.4rem;
+    margin-top: 2.4rem;
+
+    // @include phones {
+    //     text-align: center;
+    // }
+}
+
+.button-dark_modForm {
+    margin-top: 2.4rem;
+    margin-bottom: 4.8rem;
+    align-self: center;
+}
+
+.form__InputFieldMod {
+    border-radius: 4rem;
+    width: 24.6rem;
+    height: 3.9rem;
+    border: 1px solid $GrayForm;
+    transition: 0.3s;
+    padding: 0 2rem;
+    font-size: 2rem;
+
+    &:focus {
+        background-color: #fff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+    }
+}
+
+@media (max-width: 34.2rem) {
+    .form__InputFieldMod {
+        width: 22.2rem;
+        height: 3.5rem;
+    }
+}
+
+.form__wrapLabelColumn_mod {
+    margin-top: 2.4rem;
+}
+
+.form__input._error {
+    box-shadow: 0 0 15px red;
+}
